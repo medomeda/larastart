@@ -1,0 +1,48 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+$fa-font-path:"../webfonts";
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// adminlte
+@import '~admin-lte/dist/css/adminlte.css';
+
+@import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
+@import "~@fortawesome/fontawesome-free/scss/solid.scss";
+@import "~@fortawesome/fontawesome-free/scss/brands.scss";
+
+
+//Custom css
+footer {
+    margin-top: 3em;
+    background: #f5f8fa;
+    border-top: 4px solid #e5e9ee;
+    padding-top: 2em;
+    padding-bottom: 1em;
+
+    ul {
+        list-style: none;
+        padding-left: 0;
+    }
+
+    .social-icons {
+        margin-top: 20px;
+        padding: 0;
+    }
+
+    #newsletter-form {
+        margin-top: 2em;
+        margin-bottom: 3em;
+    }
+
+    .copyright {
+        text-align: center;
+        font-size: 16px;
+        color: #a5a7ae;
+        margin-top: 1em
+    }
+}
