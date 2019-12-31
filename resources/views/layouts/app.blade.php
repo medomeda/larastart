@@ -38,6 +38,9 @@
                             <a class="nav-link" href="{{ route('societes.index') }}">Sociétés</a>
                         </li>
                         <li class="nav-item">
+                            <a class="nav-link" href="{{ route('ratios.index') }}">Ratios</a>
+                        </li>
+                        <li class="nav-item">
                             <a class="nav-link" href="{{ route('posts.index') }}">Blog</a>
                         </li>
 
@@ -150,11 +153,11 @@
                 </p>
             </div>
         </footer>
-        
-        <!-- Scripts -->
-        <script src="{{ asset('js/app.js') }}" defer></script>
-
-        @yield('scripts')
     </div>
+     <!-- Scripts -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="{{ asset('js/app.js') }}" defer></script>
+
+     @yield('scripts')
 </body>
 </html>

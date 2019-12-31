@@ -9,7 +9,9 @@ $fa-font-path:"../webfonts";
 @import '~bootstrap/scss/bootstrap';
 
 // adminlte
-@import '~admin-lte/dist/css/adminlte.css';
+@import "~admin-lte/dist/css/adminLTE.css";
+@import "~admin-lte/dist/css/skins/skin-blue.min.css";
+
 
 @import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "~@fortawesome/fontawesome-free/scss/solid.scss";

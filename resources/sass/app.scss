@@ -8,8 +8,6 @@ $fa-font-path:"../webfonts";
 // Bootstrap
 @import '~bootstrap/scss/bootstrap';
 
-// adminlte
-@import '~admin-lte/dist/css/adminlte.css';
 
 @import "~@fortawesome/fontawesome-free/scss/fontawesome.scss";
 @import "~@fortawesome/fontawesome-free/scss/solid.scss";
@@ -45,4 +43,10 @@ footer {
         color: #a5a7ae;
         margin-top: 1em
     }
+}
+
+.menu-societe {
+    a:link {
+        text-decoration: none;
+      }
 }

@@ -23,6 +23,10 @@ Route::resource('formations', 'FormationController');
 /** Posts */
 Route::resource('posts', 'PostController');
 
+
+/** Ratios */
+Route::resource('ratios', 'RatioController');
+
 /** Sociétés */
 Route::group(['prefix' => 'societes'], function () {
     Route::get('/portrait/{id}', 'SocieteController@portrait')->name('societes.portrait');

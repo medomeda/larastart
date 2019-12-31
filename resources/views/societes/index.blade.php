@@ -24,7 +24,7 @@
                         <td>ID</td>
                         <td>Name</td>
                         <td>Sigle</td>
-                        <td style="width: 30%;">Actions</td>
+                        <td style="width: 15%;" class="text-center">Actions</td>
                     </tr>
                 </thead>
                 <tbody>
@@ -33,7 +33,7 @@
                         <td>{{$societe->id}}</td>
                         <td>{{$societe->name}}</td>
                         <td>{{$societe->sigle}}</td>
-                        <td>
+                        <td class="text-center">
                             <a href="{{ route('societes.edit', $societe->id)}}" class="btn btn-sm btn-primary">Edit</a>
                         
                             <a href="{{ route('societes.show', $societe->id)}}" class="btn btn-sm btn-secondary">Voir</a>

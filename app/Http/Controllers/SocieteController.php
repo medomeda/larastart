@@ -80,7 +80,17 @@ class SocieteController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $societe = Societe::findOrFail($id);
+        $societe->update($request->all());
+
+        /*$update = [
+                'name' => $request->name, 
+                'sigle' => $request->sigle, 
+                'description' => $request->description
+            ];
+        Product::where('id',$id)->update($update);*/
+
+        return redirect()->route('societes.index')->with('success',"Modification de sociéte réussi !");
     }
 
     /**
@@ -91,7 +101,8 @@ class SocieteController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Societe::where('id',$id)->delete();
+        return redirect()->route('societes.index')->with('success',"Suppression de sociéte réussi !");
     }
     public function portrait($id)
     {

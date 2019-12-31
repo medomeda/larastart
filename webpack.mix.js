@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 const mix = require('laravel-mix');
 
 /*
