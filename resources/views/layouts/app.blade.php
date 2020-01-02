@@ -11,7 +11,6 @@
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
-     <!--<link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"> -->
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
@@ -35,11 +34,14 @@
                             <a class="nav-link" href="{{ route('formations.index') }}">Formations</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('societes.index') }}">Sociétés</a>
-                        </li>
-                        <li class="nav-item">
                             <a class="nav-link" href="{{ route('ratios.index') }}">Ratios</a>
                         </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="{{ route('societes.index') }}">Sociétés</a>
+                            </li>
+                        <li class="nav-item">
+                                <a class="nav-link" href="{{ route('etudes.index') }}">Etudes</a>
+                            </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('posts.index') }}">Blog</a>
                         </li>
@@ -107,11 +109,11 @@
                    <div class="col-lg-6">
                         <h3>BrvmInvest</h3>
                         <p>Apprendre l'investissement boursier par la pratiques !</p>
-                        <ul class="social-icons list-inline">
-                            <li><a href="https://parlonscode.com/facebook" target="_blank"><i class="fab fa-facebook fa-2x"></i></a></li>
-                            <li><a href="https://parlonscode.com/twitter" target="_blank"><i class="fab fa-twitter fa-2x"></i></a></li>
-                            <li><a href="https://parlonscode.com/youtube" target="_blank"><i class="fab fa-youtube fa-2x"></i></a></li>
-                        </ul>
+                        <div class="social-icons">
+                            <span><a href="https://parlonscode.com/facebook" target="_blank"><i class="fab fa-facebook fa-2x"></i></a></span>
+                            <span><a href="https://parlonscode.com/twitter" target="_blank"><i class="fab fa-twitter fa-2x"></i></a></span>
+                            <span><a href="https://parlonscode.com/youtube" target="_blank"><i class="fab fa-youtube fa-2x"></i></a></span>
+                        </div>
                    </div>
                    <div class="col-lg-3">
                         <h3>Liens utiles</h3>
@@ -156,6 +158,9 @@
     </div>
      <!-- Scripts -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <!-- Optional: include a polyfill for ES6 Promises for IE11 
+    <script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>-->
+
     <script src="{{ asset('js/app.js') }}" defer></script>
 
      @yield('scripts')

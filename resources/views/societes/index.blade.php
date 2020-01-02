@@ -34,10 +34,9 @@
                         <td>{{$societe->name}}</td>
                         <td>{{$societe->sigle}}</td>
                         <td class="text-center">
+                            <a href="{{ route('societes.etudes', $societe->id)}}" class="btn btn-sm btn-primary">Etudes</a>
                             <a href="{{ route('societes.edit', $societe->id)}}" class="btn btn-sm btn-primary">Edit</a>
-                        
                             <a href="{{ route('societes.show', $societe->id)}}" class="btn btn-sm btn-secondary">Voir</a>
-                        
                             <form action="{{ route('societes.destroy', $societe->id)}}" method="post" style="display: inline;">
                                 @csrf
                                 @method('DELETE')

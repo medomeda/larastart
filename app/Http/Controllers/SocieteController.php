@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Etude;
+use App\Models\Ratio;
 use App\Models\Societe;
+use Illuminate\View\View;
 use Illuminate\Http\Request;
 
 class SocieteController extends Controller
@@ -104,6 +107,39 @@ class SocieteController extends Controller
         Societe::where('id',$id)->delete();
         return redirect()->route('societes.index')->with('success',"Suppression de sociéte réussi !");
     }
+
+
+    public function etudes($id) 
+    {
+        $etudes = Etude::where('societe_id', $id)
+                ->with('societe')
+                ->with('ratio')
+                ->get();
+        
+        $societe = Societe::find($id);
+        $ratios = Ratio::pluck('name','id');
+        
+        return view('societes.etudes',compact('etudes','societe','ratios'));
+    }
+
+    public function etudesSave(Request $request) {
+
+
+        $etude = Etude::create($request->all());
+
+        $id = $request->societe_id;
+
+        $etudes = Etude::where('societe_id', $id)
+                ->with('societe')
+                ->with('ratio')
+                ->get();
+
+        $html = view('societes.etudes-table', compact('etudes'))->render();
+
+        return response()->json(['html' => $html]); 
+    }
+
+
     public function portrait($id)
     {
         $societe = Societe::find($id);

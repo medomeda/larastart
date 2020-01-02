@@ -13,6 +13,8 @@ $fa-font-path:"../webfonts";
 @import "~@fortawesome/fontawesome-free/scss/solid.scss";
 @import "~@fortawesome/fontawesome-free/scss/brands.scss";
 
+@import "~sweetalert2/dist/sweetalert2.min.css";
+
 
 //Custom css
 footer {
@@ -26,8 +28,8 @@ footer {
         list-style: none;
         padding-left: 0;
     }
-
-    .social-icons {
+    
+    .social-icons  {
         margin-top: 20px;
         padding: 0;
     }

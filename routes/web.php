@@ -34,9 +34,14 @@ Route::group(['prefix' => 'societes'], function () {
     Route::get('/{id}/analysetechnique', 'SocieteController@analysetechnique')->name('societes.analysetechnique');
     Route::get('/{id}/graphique', 'SocieteController@graphique')->name('societes.graphique');
     Route::get('/{id}/synthese', 'SocieteController@synthese')->name('societes.synthese');
+    Route::get('/{id}/etudes', 'SocieteController@etudes')->name('societes.etudes');
+    Route::post('/etudesSave','SocieteController@etudesSave')->name('societes.etudes-save');
+
 });
 Route::resource('societes', 'SocieteController');
 
+
+Route::resource('etudes', 'EtudeController');
 
 /**Admin */
 Route::prefix('admin')->namespace('Back')->group(function () {

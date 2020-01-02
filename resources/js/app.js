@@ -8,7 +8,11 @@
 require('./bootstrap');
 require('admin-lte');
 
+window.Swal = require('sweetalert2');
+
 window.Vue = require('vue');
+
+
 
 /**
  * The following block of code may be used to automatically register your
